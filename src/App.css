@@ -114,3 +114,16 @@ input:focus,
 button:focus {
   outline: none;
 }
+select
+{
+    width: 80px;
+    height: 30px;
+    border:1px solid;
+    padding-left: 2px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+.Low{
+  border-bottom: 5px solid red;
+}

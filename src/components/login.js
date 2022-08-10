@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {Link,useNavigate} from "react-router-dom"
-import {Form} from "react-bootstrap"
 import { Button } from "react-bootstrap"
 import GoogleButton from 'react-google-button'
 import { useUserAuth } from '../context/userAuthContext'
@@ -39,26 +38,28 @@ const handleGoogleSignIn=async (e) =>{
    <>
   
     <div className="box">
-        <h2 className='mb-3'>Firebase Auth Login</h2>
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="email" placeholder="Email Address"
+        <h2>Welcome Back</h2>
+        <small>Manage Your Task Checklist Easily</small>
+        <form onSubmit={handleSubmit}>
+        
+                <input 
+                type="email" 
+                placeholder="Email Address"
                 onChange={(e)=> setEmail(e.target.value)}
                 />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="password" placeholder="Password"
+                <input 
+                type="password"
+                placeholder="Password"
                 onChange={(e)=> setPassword(e.target.value)}
                />
-            </Form.Group>
+           
 
             <div className="d-grid gap-2">
                 <Button variant="primary" type="Submit">
                     Login
                 </Button>
                 </div>
-        </Form>
+        </form>
         <hr/>
         <div>
             <GoogleButton className="g-btn" type="dark" onClick={handleGoogleSignIn}/>

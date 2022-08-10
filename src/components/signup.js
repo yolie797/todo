@@ -8,7 +8,6 @@ import { useUserAuth } from '../context/userAuthContext'
 
 const Signup = () => {
 
-    const [fullName,setName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [error,setError]=useState("")
@@ -33,11 +32,6 @@ const Signup = () => {
         <h2 className='mb-3'>Firebase Auth SignUp</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
-
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Control type="name" placeholder="Full Name"
-                onChange={(e)=> setEmail(e.target.value)}/>
-            </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="Email Address"

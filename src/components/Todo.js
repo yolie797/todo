@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,}) {
+
+
+export default function Todo(props,{todo, toggleComplete, handleDelete, handleEdit,}) {
   const [newTitle, setNewTitle] = React.useState(todo.title);
+  const tasklist={tasklist};
+ 
+ 
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -15,6 +20,7 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
     }
   };
   return (
+    <>
     <div className="todo">
       <input
         style={{ textDecoration: todo.completed && "line-through" }}
@@ -22,24 +28,22 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit,})
         value={todo.title === "" ? newTitle : todo.title}
         className="list"
         onChange={handleChange}
-      />
+      /> 
+      
       <div>
-        <button
+         <button
           className="button-complete"
           onClick={() => toggleComplete(todo)}
         >
           <CheckCircleIcon id="i" />
         </button>
-        <button
-          className="button-edit"
-          onClick={() => handleEdit(todo, newTitle)}
-        >
-          <EditIcon id="i" />
-        </button>
+    
         <button className="button-delete" onClick={() => handleDelete(todo.id)}>
           <DeleteIcon id="i" />
         </button>
-      </div>
     </div>
+
+      </div>
+      </>
   );
 }

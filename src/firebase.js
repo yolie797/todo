@@ -4,15 +4,14 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDP8HYNfNF1_ZNp7HGIlLVRDzDVBnQSsr8",
-  authDomain: "todolist-ecba9.web.app",
-  projectId: "todolist-ecba9",
-  storageBucket: "todolist-ecba9.appspot.com",
-  messagingSenderId: "1025461531352",
-  appId: "1:1025461531352:web:a171331893732c92ba9dad",
-  measurementId: "G-CKBWZH4B2Q"
+  apiKey: "AIzaSyChdsdx8FtvCS4wLKwLwDkecJBWS0ggF1A",
+  authDomain: "todolist-70312.firebaseapp.com",
+  projectId: "todolist-70312",
+  storageBucket: "todolist-70312.appspot.com",
+  messagingSenderId: "805227458730",
+  appId: "1:805227458730:web:21a64bdbff7f16b2bca0d3",
+  measurementId: "G-Q84B7LKELQ"
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth=getAuth();
